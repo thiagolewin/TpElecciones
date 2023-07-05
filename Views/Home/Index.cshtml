@@ -1,6 +1,59 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<main style="back">
+<video src='@Url.Content("~/img/videoEntrada.mp4")' autoplay loop></video>
 
+<main style="back">
+    <section class="cards">
+        @{
+            foreach (Partido item in @ViewBag.Partidos)
+            {
+                <div class="card">
+  <div class="content">
+    <div class="back">
+      <div class="back-content" style='background-image: url(@item.Logo)'>
+        <svg stroke="#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="50px" width="50px" fill="#ffffff">
+
+        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+
+        <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+
+        <g id="SVGRepo_iconCarrier">
+
+        </g>
+
+        </svg>
+        <strong>@item.Nombre</strong>
+      </div>
+    </div>
+    <div class="front">
+      
+      <div class="img">
+        <div class="circle">
+        </div>
+        <div class="circle" id="right">
+        </div>
+        <div class="circle" id="bottom">
+        </div>
+      </div>
+
+      <div class="front-content">
+        <img src="@item.Logo" alt="">
+        <div class="description">
+          <div class="title">
+            <p class="title">
+              <strong>@item.Nombre</strong>
+            </p>
+          </div>
+          <p class="card-footer">
+            Fundacion: @item.FechaFundacion
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            }
+        }
+    </section>
 </main>
