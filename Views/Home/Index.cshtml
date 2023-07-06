@@ -1,17 +1,17 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<video src='@Url.Content("~/img/videoEntrada.mp4")' autoplay loop></video>
+
 
 <main style="back">
     <section class="cards">
         @{
             foreach (Partido item in @ViewBag.Partidos)
             {
-                <div class="card">
+  <a class="card" href='@Url.Action("VerDetallePartido", "Home", new { IdPartido = @item.IdPartido })'>
   <div class="content">
     <div class="back">
-      <div class="back-content" style='background-image: url(@item.Logo)'>
+      <div class="back-content" style='background-image: url(@item.Presidente.foto)'>
         <svg stroke="#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="50px" width="50px" fill="#ffffff">
 
         <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
@@ -21,13 +21,11 @@
         <g id="SVGRepo_iconCarrier">
 
         </g>
-
         </svg>
         <strong>@item.Nombre</strong>
       </div>
     </div>
     <div class="front">
-      
       <div class="img">
         <div class="circle">
         </div>
@@ -46,13 +44,19 @@
             </p>
           </div>
           <p class="card-footer">
-            Fundacion: @item.FechaFundacion
+            Fundacion: @item.FechaFundacion.ToString("dd/MM/yyyy")
+          </p>
+          <p class="card-footer">
+            Candidato a presidente: @item.Presidente.Nombre @item.Presidente.Apellido 
+          </p>
+            <p class="card-footer">
+            Candidato a vice-presidente: @item.Vice.Nombre @item.Vice.Apellido 
           </p>
         </div>
       </div>
     </div>
   </div>
-</div>
+</a>
             }
         }
     </section>

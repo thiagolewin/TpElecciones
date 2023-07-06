@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "DetallePartido";
+}
+        @{
+            Candidato presidente = new Candidato();
+            Candidato vice = new Candidato();
+            foreach(var candidato in ViewBag.Candidatos) {
+                if (candidato.postulacion == "Presidente") {
+                    presidente = candidato;
+                } else if (candidato.postulacion == "Vice") {
+                    vice = candidato;
+                }
+            }
+        }
+<main style="back">
+    <div class="presidente">
+        <img src="@presidente.foto"/>
+        <h2>@presidente.Nombre @presidente.Apellido</h2>
+    </div>
+</main>

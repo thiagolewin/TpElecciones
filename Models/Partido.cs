@@ -6,4 +6,6 @@ public class Partido {
     public DateTime FechaFundacion { set;  get;}
      public int CantidadDiputados { set;  get;}
       public int CantidadSenadores { set;  get;}
+    public Candidato Presidente { set;  get;}
+    public Candidato Vice { set;  get;}
 }
