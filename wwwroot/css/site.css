@@ -3,9 +3,8 @@
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
   text-decoration: none;
-
 }
 a {
   text-decoration: none;
@@ -265,10 +264,87 @@ video {
     transform: translateY(0px);
   }
 }
-.presidente {
-  width: 500px;
+#DetallePartido {
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
 }
-.presidente img {
-  width: 100%;
+.presidenteVice {
+  display: flex;
+  align-items: center;
+}
+.cardPresidente {
+  width: 290px;
+  height: 350px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f2f2f3;
+  border-radius: 12px;
+  box-shadow: inset 5px 5px 10px #a9a9aa77,
+               inset -5px -5px 10px #ffffff7e;
+ }
+ .cardVice {
+  width: 190px;
   height: 250px;
-}
+  margin-left: 40px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #232325;
+  border-radius: 12px;
+  box-shadow: inset 5px 5px 10px #a9a9aa77,
+               inset -5px -5px 10px #ffffff7e;
+ }
+ .cardVice p {
+  margin-bottom: 10px;
+ }
+ .cardPresidente .img, .cardVice .img {
+  min-height: 50px;
+  margin-top: 1.6em;
+  aspect-ratio: 1;
+  border-radius: 30%;
+  background-size: cover;
+  margin-bottom: 0.4em;
+  box-shadow: -5px -5px 8px #ffffff7a, 
+               5px 5px 8px #a9a9aa7a;
+ }
+ 
+ .cardPresidente .info, .cardVice .info {
+  text-align: center;
+  margin-top: 0.4em;
+  background: linear-gradient(120deg, rgba(0,194,255,1) 0%, rgba(0,86,255,1) 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+ 
+ .cardPresidente .info > span, .cardVice .info > span {
+  font-weight: bold;
+  font-size: 1.2em;
+ }
+ 
+ .cardPresidente a, .cardVice a {
+  margin-top: 1em;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, rgba(0,194,255,1) 0%, rgba(0,86,255,1) 100%);
+  padding: .5em 2em;
+  border-radius: 0.7em;
+ }
+ 
+ .cardPresidente a:active, .cardVice a:active {
+  box-shadow: inset 3px 3px 3px #0056ff,
+              inset -3px -3px 3px #00c2ff;
+ }
+ .diputados {
+  display: flex;
+  flex-wrap: wrap;
+ }
+ .diputado {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+ }
