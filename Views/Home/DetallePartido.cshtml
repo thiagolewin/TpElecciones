@@ -27,20 +27,25 @@
   <a target="_new" href= @presidente.WikiPedia>WikiPedia</a>
 </div>
 <div class="cardVice">
-
-<div class="img" style='background-image: url(@vice.foto)'></div>
+  <div class="img" style='background-image: url(@vice.foto)'></div>
   <div class="info">
     <span>@vice.Nombre @vice.Apellido</span>
     <p>@vice.postulacion</p>
     <p>@vice.FechaNacimiento.ToString("dd/MM/yyyy")</p>
   </div>
-  <a target="_new" href="https://es.wikipedia.org/wiki/Sergio_Massa">WikiPedia</a>
+  <a target="_new" href= @vice.WikiPedia>WikiPedia</a>
 </div>
  </section>
  <section class="diputados">
  @foreach(var diputado in Diputados) {
     <div class="diputado">
-        @diputado.Nombre
+      <div class="card2">
+        <div class="img" style='background-image: url(@diputado.foto)'></div>
+        <h2>@diputado.Nombre @diputado.Apellido</h2>
+        <h3>Diputado</h3>
+        <h3 class="DiputadoFecha">@diputado.FechaNacimiento.ToString("dd/MM/yyyy")</h3>
+        <a target="_new" href= @diputado.WikiPedia>WikiPedia</a>
+      </div>
     </div>
  }
 

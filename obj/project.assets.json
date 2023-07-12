@@ -508,11 +508,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\47393575\\Desktop\\TpElecciones\\tpElecciones.csproj",
+      "projectUniqueName": "C:\\Users\\47393575\\TpElecciones\\tpElecciones.csproj",
       "projectName": "tpElecciones",
-      "projectPath": "C:\\Users\\47393575\\Desktop\\TpElecciones\\tpElecciones.csproj",
+      "projectPath": "C:\\Users\\47393575\\TpElecciones\\tpElecciones.csproj",
       "packagesPath": "C:\\Users\\47393575\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\47393575\\Desktop\\TpElecciones\\obj\\",
+      "outputPath": "C:\\Users\\47393575\\TpElecciones\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

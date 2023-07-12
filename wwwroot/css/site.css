@@ -267,6 +267,8 @@ video {
 #DetallePartido {
   height: calc(100vh - 60px);
   display: flex;
+  background-color: #151515;
+  justify-content: space-between;
   align-items: center;
 }
 .presidenteVice {
@@ -283,7 +285,10 @@ video {
   background: #f2f2f3;
   border-radius: 12px;
   box-shadow: inset 5px 5px 10px #a9a9aa77,
-               inset -5px -5px 10px #ffffff7e;
+  inset -5px -5px 10px #ffffff7e;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
  }
  .cardVice {
   width: 190px;
@@ -296,13 +301,23 @@ video {
   background: #232325;
   border-radius: 12px;
   box-shadow: inset 5px 5px 10px #a9a9aa77,
-               inset -5px -5px 10px #ffffff7e;
+  inset -5px -5px 10px #ffffff7e;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+ }
+ .cardVice:hover {
+  transform: scale(1.1);
+ }
+ .cardPresidente:hover {
+  transform: scale(1.1);
  }
  .cardVice p {
   margin-bottom: 10px;
  }
- .cardPresidente .img, .cardVice .img {
-  min-height: 50px;
+ .cardPresidente .img, .cardVice .img, .card2 .img {
+  height: 50px;
+  width: 50px;
   margin-top: 1.6em;
   aspect-ratio: 1;
   border-radius: 30%;
@@ -326,25 +341,71 @@ video {
   font-size: 1.2em;
  }
  
- .cardPresidente a, .cardVice a {
+ .cardPresidente a, .cardVice a, .card2 a {
+  position: absolute;
   margin-top: 1em;
   color: #fff;
   text-decoration: none;
   background: linear-gradient(90deg, rgba(0,194,255,1) 0%, rgba(0,86,255,1) 100%);
   padding: .5em 2em;
+  bottom: 20px;
   border-radius: 0.7em;
  }
  
- .cardPresidente a:active, .cardVice a:active {
+ .cardPresidente a:active, .cardVice a:active, .card2 a:active {
   box-shadow: inset 3px 3px 3px #0056ff,
               inset -3px -3px 3px #00c2ff;
  }
  .diputados {
   display: flex;
+  max-width: 600px;
+ 
   flex-wrap: wrap;
+  position: absolute;
+  right: 10%;
  }
  .diputado {
-  width: 200px;
-  height: 200px;
-  background-color: red;
+  width: 225px;
+  height: 300px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+  margin-left: 50px;
+  margin-top: 30px;
+  cursor: pointer;
+ }
+ 
+ .card2 {
+  width: 225px;
+  height: 300px;
+  background-color: #fff;
+  transition: all .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+ }
+ 
+ .card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+ }
+ 
+ .diputado:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+  transform: scale(1.1);
+ }
+ .card2 h2 {
+  color: #151515;
+  font-size: 1em;
+  margin-top: 20px;
+ }
+ .card2 h3 {
+  color: rgb(161, 149, 149);
+  font-size: 0.8em;
+  margin-top: 5px;
+ }
+ .card2 .DiputadoFecha {
+  margin-top: 20px;
  }
