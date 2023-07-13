@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "FormCandidatos";
+}
+<main id="MainForm">
+    <form action='@Url.Action("GuardarCandidato","Home")' method="post" class="formUsuario">
+        <input type="hidden" value="@ViewBag.IdPartido" required name="IdPartido" autocomplete="off">
+        <h4>Nombre</h4>
+        <input type="text" value="" required name="Nombre" autocomplete="off">
+        <h4>Apellido</h4>
+        <input type="text" value="" required name="Apellido" autocomplete="off">
+        <h4>FechaNacimiento</h4>
+        <input type="text" value="" required name="FechaNacimiento" autocomplete="off">
+        <h4>Foto</h4>
+        <input type="text" value="" required name="foto" autocomplete="off">
+        <input type="hidden" value="Diputado" required name="postulacion" autocomplete="off">
+        <h4>WikiPedia</h4>
+        <input type="text" value="" required name="WikiPedia" autocomplete="off">
+        <button type="submit" class="enviarForm">
+            Enviar
+        </button>
+    </form>
+</main>

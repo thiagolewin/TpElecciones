@@ -341,7 +341,7 @@ video {
   font-size: 1.2em;
  }
  
- .cardPresidente a, .cardVice a, .card2 a {
+ .wikipedia {
   position: absolute;
   margin-top: 1em;
   color: #fff;
@@ -352,7 +352,7 @@ video {
   border-radius: 0.7em;
  }
  
- .cardPresidente a:active, .cardVice a:active, .card2 a:active {
+ .wikipedia:active {
   box-shadow: inset 3px 3px 3px #0056ff,
               inset -3px -3px 3px #00c2ff;
  }
@@ -365,6 +365,7 @@ video {
   right: 10%;
  }
  .diputado {
+  text-decoration: none;
   width: 225px;
   height: 300px;
   background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
@@ -375,7 +376,7 @@ video {
   cursor: pointer;
  }
  
- .card2 {
+ .diputado .card2 {
   width: 225px;
   height: 300px;
   background-color: #fff;
@@ -387,7 +388,7 @@ video {
   position: relative;
  }
  
- .card2:hover {
+ .diputado .card2:hover {
   transform: scale(0.98);
   border-radius: 20px;
  }
@@ -396,16 +397,79 @@ video {
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
   transform: scale(1.1);
  }
- .card2 h2 {
+ .diputado .card2 h2 {
   color: #151515;
   font-size: 1em;
   margin-top: 20px;
  }
- .card2 h3 {
+ .diputado .card2 h3 {
   color: rgb(161, 149, 149);
   font-size: 0.8em;
   margin-top: 5px;
  }
- .card2 .DiputadoFecha {
+ .diputado .card2 .DiputadoFecha {
   margin-top: 20px;
+ }
+ .linkAgregar {
+  position: absolute;
+  color: white;
+  top: 0;
+  margin-top: 100px;
+  width: 100%;
+  font-size: 1.2em;
+  text-align: center;
+ }
+ .detalleDiputado {
+    left: 50%;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: -200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    position: relative;
+    outline: 1px solid black;
+ }
+ .detalleDiputado img {
+
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  margin-bottom: 20px;
+ }
+ .detalleDiputado h2 {
+  font-weight: 700;
+  color: black;
+  margin-bottom: 15px;
+ }
+ .detalleDiputado h4 {
+  font-weight: 600;
+  color: #232325;
+  margin-bottom: 50px;
+ }
+ .detalleDiputado h5 {
+  font-weight: 300;
+  color:  rgb(3, 145, 189);
+ }
+ .detalleDiputado h6 {
+  font-weight: 700;
+  color: #3030aa;
+  margin-bottom: 100px;
+ }
+ #MainForm {
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .formUsuario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ .formUsuario
+ {
+  
  }

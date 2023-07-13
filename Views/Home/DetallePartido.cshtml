@@ -16,6 +16,7 @@
             }
         }
 <main id="DetallePartido">
+ <a class="linkAgregar" href='@Url.Action("AgregarCandidato", "Home", new { IdPartido = @ViewBag.Partido.IdPartido })'>Agregar Candidato</a>
  <section class="presidenteVice">
  <div class="cardPresidente">
 <div class="img" style='background-image: url(@presidente.foto)'></div>
@@ -38,13 +39,13 @@
  </section>
  <section class="diputados">
  @foreach(var diputado in Diputados) {
-    <div class="diputado">
+    <div class="diputado" onclick="vercandidato(@diputado.IdCandidato)" >
       <div class="card2">
         <div class="img" style='background-image: url(@diputado.foto)'></div>
         <h2>@diputado.Nombre @diputado.Apellido</h2>
         <h3>Diputado</h3>
         <h3 class="DiputadoFecha">@diputado.FechaNacimiento.ToString("dd/MM/yyyy")</h3>
-        <a target="_new" href= @diputado.WikiPedia>WikiPedia</a>
+        <a class="wikipedia"target="_new" href= @diputado.WikiPedia>WikiPedia</a>
       </div>
     </div>
  }

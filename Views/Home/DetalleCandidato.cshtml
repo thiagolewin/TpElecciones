@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "DetalleCandidato";
+}
+<main>
+    <div class="detalleDiputado">
+        <img src="@ViewBag.Candidato.foto" alt="">
+        <h2>@ViewBag.Candidato.Nombre @ViewBag.Candidato.Apellido</h2>
+        <h4>@ViewBag.Candidato.FechaNacimiento.ToString("dd/MM/yyyy")</h4>
+        <h5>Postulacion:</h5>
+        <h6>@ViewBag.Candidato.postulacion</h6>
+        <a class="wikipedia"target="_new" href= @ViewBag.Candidato.WikiPedia>WikiPedia</a>
+    </div>
+</main>

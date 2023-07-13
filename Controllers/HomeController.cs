@@ -24,13 +24,22 @@ public class HomeController : Controller
         return View("DetallePartido");
     }
     public IActionResult VerDetalleCandidato(int id) {
+        ViewBag.Candidato = BD.VerInfoCandidato(id);
         return View("DetalleCandidato");
     }
     public IActionResult AgregarCandidato(int IdPartido) {
         ViewBag.IdPartido = IdPartido;
         return View("FormCandidatos");
     }
-    [HttpPost] IActionResult GuardarCandidato(Candidato can) {
+    [HttpPost] IActionResult GuardarCandidato(int IdPartido, string Nombre, string Apellido, string FechaNacimiento, string foto, string postulacion, string WikiPedia) {
+        Candidato can = new Candidato();
+        can.IdPartido = IdPartido;
+        can.Nombre = Nombre;
+        can.Apellido = Apellido;
+        can.FechaNacimiento = DateTime.Parse(FechaNacimiento);
+        can.foto = foto;
+        can.postulacion = postulacion;
+        can.WikiPedia = WikiPedia;
         BD.AgregarCandidato(can);
         ViewBag.Partido = BD.VerInfoPartido(can.IdPartido);
         return View("DetallePartido");
