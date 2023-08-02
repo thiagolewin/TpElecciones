@@ -264,14 +264,18 @@ video {
     transform: translateY(0px);
   }
 }
-#DetallePartido {
-  height: calc(100vh - 60px);
+#DetallePartido { 
+  position: relative;
   display: flex;
   background-color: #151515;
   justify-content: space-between;
   align-items: center;
+  min-height: calc(100vh - 60px);
 }
 .presidenteVice {
+  margin-top: 150px;
+  position: absolute;
+  top: 0;
   display: flex;
   align-items: center;
 }
@@ -359,12 +363,13 @@ video {
  .diputados {
   display: flex;
   max-width: 600px;
- 
+  margin-top: 50px;
   flex-wrap: wrap;
   position: absolute;
   right: 10%;
  }
  .diputado {
+
   text-decoration: none;
   width: 225px;
   height: 300px;
@@ -473,3 +478,55 @@ video {
  {
   
  }
+ .flecha {
+  height: 50px;
+  margin-top: 60px;
+  cursor: pointer;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+ }
+ .negro {
+  color: black;
+ }
+ #creditos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#creditos h1 {
+  margin-top: 100px;
+}
+#creditos section {
+  margin-top: 150px;
+  display: flex ;
+}
+#creditos div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 50px;
+  border: 2px solid black;
+  padding-bottom: 20px;
+  animation: creditos 3s infinite linear;
+}
+#creditos div img {
+  height: 300px;
+  width: 400px;
+}
+#creditos div h2 {
+  color: black;
+  margin-top: 25px;
+  font-weight: 600;
+  
+}
+@keyframes creditos {
+  0% {
+      transform: translateY(0);
+  }
+  25% {transform: translateY(5px);}
+  50% {transform: translateY(0);}
+  75% {transform: translateY(-5px);}
+} 

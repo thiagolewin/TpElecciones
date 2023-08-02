@@ -13,8 +13,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\47393575\\Desktop\\TpElecciones\\wwwroot\\img\\cofa.jpg",
+      "PackagePath": "staticwebassets\\img\\cofa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\47393575\\Desktop\\TpElecciones\\wwwroot\\img\\flecha.png",
+      "PackagePath": "staticwebassets\\img\\flecha.png"
+    },
+    {
       "Id": "C:\\Users\\47393575\\Desktop\\TpElecciones\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\47393575\\Desktop\\TpElecciones\\wwwroot\\img\\thiago.jpg",
+      "PackagePath": "staticwebassets\\img\\thiago.jpg"
     },
     {
       "Id": "C:\\Users\\47393575\\Desktop\\TpElecciones\\wwwroot\\img\\videoEntrada.mp4",

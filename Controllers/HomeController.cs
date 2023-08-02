@@ -31,18 +31,19 @@ public class HomeController : Controller
         ViewBag.IdPartido = IdPartido;
         return View("FormCandidatos");
     }
-    [HttpPost] IActionResult GuardarCandidato(int IdPartido, string Nombre, string Apellido, string FechaNacimiento, string foto, string postulacion, string WikiPedia) {
-        Candidato can = new Candidato();
-        can.IdPartido = IdPartido;
-        can.Nombre = Nombre;
-        can.Apellido = Apellido;
-        can.FechaNacimiento = DateTime.Parse(FechaNacimiento);
-        can.foto = foto;
-        can.postulacion = postulacion;
-        can.WikiPedia = WikiPedia;
+    public IActionResult AgregarPartido() {
+        return View("FormPartidos");
+    }
+    [HttpPost] public IActionResult GuardarCandidato(int IdPartido, string Nombre, string Apellido, DateTime FechaNacimiento, string Foto, string Postulacion, string WikiPedia) {
+        Candidato can = new Candidato(IdPartido,Nombre,Apellido,FechaNacimiento,Foto,Postulacion,WikiPedia);
         BD.AgregarCandidato(can);
-        ViewBag.Partido = BD.VerInfoPartido(can.IdPartido);
-        return View("DetallePartido");
+        return RedirectToAction("VerDetallePartido", new { IdPartido = IdPartido});
+        
+    }
+     [HttpPost] public IActionResult GuardarPartido(string Nombre, string Logo, DateTime FechaFundacion, int CantidadDiputados, int CantidadSenadores, string SitioWeb) {
+        Partido par = new Partido(Nombre, Logo, FechaFundacion, CantidadDiputados, CantidadSenadores, SitioWeb);
+        BD.AgregarPartido(par);
+       return RedirectToAction("Index");
     }
     public IActionResult EliminarCandidato(int IdCandidato, int IdPartido) {
         BD.EliminarCandidato(IdCandidato);

@@ -5,7 +5,16 @@ public static class BD {
     
     private static string _connectionString = @"Server=localhost;DataBase=Elecciones2023;Trusted_Connection=True;";
     public static void AgregarCandidato(Candidato can) {
-
+        string sql = "INSERT INTO Candidato(IdPartido,Apellido,Nombre,FechaNacimiento,Foto,Postulacion,WikiPedia) VALUES (@pIdPartido,@pApellido,@pNombre,@pFechaNacimiento,@pFoto,@pPostulacion,@pWikiPedia)";
+        using(SqlConnection db = new SqlConnection(_connectionString)) {
+            db.Execute(sql, new {pIdPartido = can.IdPartido, pApellido = can.Apellido, pNombre = can.Nombre, pFechaNacimiento = can.FechaNacimiento, pFoto = can.Foto, pPostulacion = can.Postulacion, pWikiPedia = can.WikiPedia});
+        }
+    }
+      public static void AgregarPartido(Partido par) {
+        string sql = "INSERT INTO Partido(Nombre,Logo,FechaFundacion,CantidadDiputados,CantidadSenadores,SitioWeb) VALUES (@pNombre,@pLogo,@pFechaFundacion,@pCantidadDiputados,@pCantidadSenadores,@pSitioWeb)";
+        using(SqlConnection db = new SqlConnection(_connectionString)) {
+            db.Execute(sql, new {pNombre = par.Nombre, pLogo = par.Logo, pFechaFundacion = par.FechaFundacion, pCantidadDiputados = par.CantidadDiputados, pCantidadSenadores = par.CantidadSenadores, pSitioWeb = par.SitioWeb});
+        }
     }
     public static void EliminarCandidato(int IdCandidato) {
 

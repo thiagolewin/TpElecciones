@@ -4,59 +4,69 @@
 
 
 <main style="back">
+    <a class="linkAgregar negro" href='@Url.Action("AgregarPartido", "Home")'>Agregar Partido</a>
     <section class="cards">
         @{
             foreach (Partido item in @ViewBag.Partidos)
             {
-  <a class="card" href='@Url.Action("VerDetallePartido", "Home", new { IdPartido = @item.IdPartido })'>
-  <div class="content">
-    <div class="back">
-      <div class="back-content" style='background-image: url(@item.Presidente.foto)'>
-        <svg stroke="#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="50px" width="50px" fill="#ffffff">
+              @if(item.Presidente != null)
+              {
+                <a class="card" href='@Url.Action("VerDetallePartido", "Home", new { IdPartido = @item.IdPartido })'>
+                  <div class="content">
+                    <div class="back">
+                      
+                      
+                      <div class="back-content" style='background-image: url(@item.Presidente.Foto)'>
+                        <svg stroke="#ffffff" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="50px" width="50px" fill="#ffffff">
 
-        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+                        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
 
-        <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
+                        <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
 
-        <g id="SVGRepo_iconCarrier">
+                        <g id="SVGRepo_iconCarrier">
 
-        </g>
-        </svg>
-        <strong>@item.Nombre</strong>
-      </div>
-    </div>
-    <div class="front">
-      <div class="img">
-        <div class="circle">
-        </div>
-        <div class="circle" id="right">
-        </div>
-        <div class="circle" id="bottom">
-        </div>
-      </div>
+                        </g>
+                        </svg>
+                        <strong>@item.Nombre</strong>
+                      </div>
+                    </div>
+                    <div class="front">
+                      <div class="img">
+                        <div class="circle">
+                        </div>
+                        <div class="circle" id="right">
+                        </div>
+                        <div class="circle" id="bottom">
+                        </div>
+                      </div>
 
-      <div class="front-content">
-        <img src="@item.Logo" alt="">
-        <div class="description">
-          <div class="title">
-            <p class="title">
-              <strong>@item.Nombre</strong>
-            </p>
-          </div>
-          <p class="card-footer">
-            Fundacion: @item.FechaFundacion.ToString("dd/MM/yyyy")
-          </p>
-          <p class="card-footer">
-            Candidato a presidente: @item.Presidente.Nombre @item.Presidente.Apellido 
-          </p>
-            <p class="card-footer">
-            Candidato a vice-presidente: @item.Vice.Nombre @item.Vice.Apellido 
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</a>
+                      <div class="front-content">
+                        <img src="@item.Logo" alt="">
+                        <div class="description">
+                          <div class="title">
+                            <p class="title">
+                              <strong>@item.Nombre</strong>
+                            </p>
+                          </div>
+                          <p class="card-footer">
+                            Fundacion: @item.FechaFundacion.ToString("dd/MM/yyyy")
+                          </p>
+                          <p class="card-footer">
+                            Candidato a presidente: @item.Presidente.Nombre @item.Presidente.Apellido 
+                          </p>
+                            <p class="card-footer">
+                            Candidato a vice-presidente: @item.Vice.Nombre @item.Vice.Apellido 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              }
+              else
+              {
+                  <a class="card" href='@Url.Action("VerDetallePartido", "Home", new { IdPartido = @item.IdPartido })'>@item.Nombre</a>
+              }
             }
         }
     </section>

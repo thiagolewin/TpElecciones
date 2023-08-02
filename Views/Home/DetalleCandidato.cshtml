@@ -1,13 +1,14 @@
 @{
     ViewData["Title"] = "DetalleCandidato";
 }
+<a href='@Url.Action("VerDetallePartido", "Home", new { IdPartido = @ViewBag.Candidato.IdPartido })'><img src="/img/flecha.png" alt="" class="flecha"></a>
 <main>
     <div class="detalleDiputado">
-        <img src="@ViewBag.Candidato.foto" alt="">
+        <img src="@ViewBag.Candidato.Foto" alt="">
         <h2>@ViewBag.Candidato.Nombre @ViewBag.Candidato.Apellido</h2>
         <h4>@ViewBag.Candidato.FechaNacimiento.ToString("dd/MM/yyyy")</h4>
         <h5>Postulacion:</h5>
-        <h6>@ViewBag.Candidato.postulacion</h6>
+        <h6>@ViewBag.Candidato.Postulacion</h6>
         <a class="wikipedia"target="_new" href= @ViewBag.Candidato.WikiPedia>WikiPedia</a>
     </div>
 </main>

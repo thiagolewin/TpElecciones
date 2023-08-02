@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "FormPartidos";
+}
+<main id="MainForm">
+    <form action='@Url.Action("GuardarPartido","Home")' method="post" class="formUsuario">
+        <h4>Nombre</h4>
+        <input type="text" value="" required name="Nombre" autocomplete="off">
+        <h4>Logo</h4>
+        <input type="text" value="" required name="Logo" autocomplete="off">
+        <h4>Fecha Fundacion</h4>
+        <input type="date" value="" required name="FechaFundacion" autocomplete="off">
+        <h4>Cantidad Diputados</h4>
+        <input type="text" value="" required name="CantidadDiputados" autocomplete="off">
+        <h4>Cantidad Senadores</h4>
+        <input type="text" value="" required name="CantidadSenadores" autocomplete="off">
+        <h4>SitioWeb</h4>
+        <input type="text" value="" required name="SitioWeb" autocomplete="off">
+        <button type="submit" class="enviarForm">
+            Enviar
+        </button>
+    </form>
+</main>
