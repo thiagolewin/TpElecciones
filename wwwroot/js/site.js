@@ -8,6 +8,8 @@ function vercandidato(idCandidato)
     window.location.href = "/Home/VerDetalleCandidato/"+ idCandidato;
     
 }
+
+
 const main = document.querySelector("#DetallePartido")
 const Diputados = document.querySelector(".diputados")
 main.style.height = Diputados.offsetHeight + 200 + "px"

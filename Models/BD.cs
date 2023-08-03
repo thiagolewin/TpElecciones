@@ -17,7 +17,10 @@ public static class BD {
         }
     }
     public static void EliminarCandidato(int IdCandidato) {
-
+        string sql = "DELETE FROM Candidato WHERE IdCandidato = @Id";
+        using(SqlConnection db = new SqlConnection(_connectionString)) {
+            db.Execute(sql,new {Id = IdCandidato});
+        }
     }
     public static Partido VerInfoPartido(int IdPartido) {
         Partido MiPartido = new Partido();

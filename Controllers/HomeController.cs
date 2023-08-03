@@ -47,8 +47,7 @@ public class HomeController : Controller
     }
     public IActionResult EliminarCandidato(int IdCandidato, int IdPartido) {
         BD.EliminarCandidato(IdCandidato);
-        ViewBag.Partido = BD.VerInfoPartido(IdPartido);
-        return View("DetallePartido");
+        return RedirectToAction("VerDetallePartido", new { IdPartido = IdPartido});
     }
     public IActionResult Elecciones() {
         return View("Elecciones");

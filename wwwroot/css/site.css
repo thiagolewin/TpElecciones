@@ -172,8 +172,17 @@ video {
   justify-content: end;
   background-color: black;
 }
+
+.front .front-content .logo-container
+{
+  height:200px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
 .front .front-content img {
-  height: 200px;
+  max-height: 200px;
+  width: 100%;
 }
 .front-content .badge {
   background-color: #00000055;
@@ -354,6 +363,7 @@ video {
   padding: .5em 2em;
   bottom: 20px;
   border-radius: 0.7em;
+  z-index: 1000;
  }
  
  .wikipedia:active {
@@ -438,7 +448,7 @@ video {
     position: relative;
     outline: 1px solid black;
  }
- .detalleDiputado img {
+ .detalleDiputado .imagenDiputado {
 
   border-radius: 10px 10px 0 0;
   width: 100%;
@@ -530,3 +540,12 @@ video {
   50% {transform: translateY(0);}
   75% {transform: translateY(-5px);}
 } 
+.cruz {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 1000000;
+}

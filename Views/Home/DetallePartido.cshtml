@@ -46,6 +46,7 @@
  @foreach(var diputado in Diputados) {
     <div class="diputado" onclick="vercandidato(@diputado.IdCandidato)" >
       <div class="card2">
+        <a href='@Url.Action("EliminarCandidato","Home", new {IdCandidato = @diputado.IdCandidato, IdPartido = @diputado.IdPartido})'><img src="/img/cruz.png" class="cruz" ></a> 
         <div class="img" style='background-image: url(@diputado.Foto)'></div>
         <h2>@diputado.Nombre @diputado.Apellido</h2>
         <h3>Diputado</h3>

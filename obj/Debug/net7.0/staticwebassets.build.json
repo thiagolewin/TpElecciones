@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B9AwT4q6F16fw73OODYoJzlyzaO9V7RcdQtCnPxvvfQ=",
+  "Hash": "ucqCh7+ecM8bZrA4yGuWv01oXdLtVVQTfvJ3bSAxlvw=",
   "Source": "tpElecciones",
   "BasePath": "_content/tpElecciones",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\cofa.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\47393575\\Desktop\\TpElecciones\\wwwroot\\img\\cruz.png",
+      "SourceId": "tpElecciones",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\47393575\\Desktop\\TpElecciones\\wwwroot\\",
+      "BasePath": "_content/tpElecciones",
+      "RelativePath": "img/cruz.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\cruz.png"
     },
     {
       "Identity": "C:\\Users\\47393575\\Desktop\\TpElecciones\\wwwroot\\img\\flecha.png",
